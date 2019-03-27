@@ -4,8 +4,8 @@ import time
 import random
 
 #
-usuario = "jchamps_gb"
-contrasena = "aNh8htTGBZhZyzGMX9s3CYuwzpo4tU25E50fq1LB2XV8A9LOSs"
+usuario = ""
+contrasena = ""
 # IP:PUERTO
 proxy = "201.163.73.93:53281"
 # Para mas proxys, verifica la siguiente liga: https://free-proxy-list.net/anonymous-proxy.html
@@ -17,9 +17,9 @@ chrome_options.add_argument('--proxy-server=%s' % proxy)
 # Declaro la variable con la ruta donde se encuentra el controlador de chrome
 executable_path = "C:/dev/chromedriver_win32/chromedriver.exe"
 # Con proxy
-# chrome = webdriver.Chrome(executable_path=executable_path, chrome_options=chrome_options)
+chrome = webdriver.Chrome(executable_path=executable_path, chrome_options=chrome_options)
 # Sin proxy
-chrome = webdriver.Chrome(executable_path=executable_path)
+# chrome = webdriver.Chrome(executable_path=executable_path)
 # Indicamos la url del sitio a visitar, en este caso sera Instagram
 chrome.get("https://www.instagram.com/accounts/login/")
 chrome.maximize_window()
